@@ -1,0 +1,166 @@
+.hero
+{
+  position: relative;
+  width: 100%;
+  height: 92vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.carousel-track
+{
+  display: flex;
+  height: 100%;
+  transition: transform 0.7s ease;
+  will-change: transform;
+}
+
+.slide
+{
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.overlay
+{
+  position: absolute;
+  inset: 0;
+ background-color: #00000057;
+}
+
+.caption
+{
+  position: absolute;
+  bottom: 80px;
+  left: 8%;
+  max-width: 560px;
+  color: white;
+}
+
+.caption h1
+{
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  font-family: Poppins, sans-serif;
+}
+
+.caption p
+{
+  font-size: 18px;
+  line-height: 1.6;
+  color: #E6E6E6;
+  margin-bottom: 24px;
+}
+.book-btn .arrow2{
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
+}
+
+.dots
+{
+  position: absolute;
+  bottom: 26px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot
+{
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin: 0 7px;
+  background: rgba(255,255,255,0.45);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.dot.active
+{
+  background: #CBA135;
+  transform: scale(1.2);
+}
+
+.scroll-indicator
+{
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-indicator span
+{
+  display: block;
+  width: 22px;
+  height: 36px;
+  border: 2px solid white;
+  border-radius: 14px;
+  position: relative;
+}
+
+.scroll-indicator span::before
+{
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background: white;
+  border-radius: 2px;
+  animation: scrollMove 1.6s infinite;
+}
+
+@keyframes scrollMove
+{
+  0%
+  {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  100%
+  {
+    opacity: 0;
+    transform: translate(-50%, 14px);
+  }
+}
+
+@media (max-width: 768px)
+{
+  .hero
+  {
+    height: 72vh;
+  }
+
+  .caption
+  {
+    left: 20px;
+    right: 20px;
+    bottom: 70px;
+  }
+
+  .caption h1
+  {
+    font-size: 30px;
+  }
+
+  .caption p
+  {
+    font-size: 15px;
+  }
+}
