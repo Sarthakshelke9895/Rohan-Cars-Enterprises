@@ -90,7 +90,7 @@ transition: color 0.3s ease;
 color: #CBA135;
 }
 
-.book-btn
+.book-btn-navbar
 {
 background-color: #ff4c4c;
 color: white;
@@ -108,7 +108,7 @@ align-items: center;
 box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-.book-btn:hover
+.book-btn-navbar:hover
 {
 background-color: #e03e3e;
 transform: translateY(-1px);
