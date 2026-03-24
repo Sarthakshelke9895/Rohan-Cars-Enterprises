@@ -39,7 +39,10 @@ setMenuOpen(false)
 
   return (
     <div  className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <div className="logo-and-name">
+      <div className="logo-and-name"   onClick={() =>
+  {
+    window.location.reload();
+  }}>
             <img src={logo} alt="Logo" className='web-logo' />
             <div className="company-name">
               <h2>Rohan Car Service</h2>
