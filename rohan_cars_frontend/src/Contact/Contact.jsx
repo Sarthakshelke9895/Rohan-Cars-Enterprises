@@ -1,0 +1,172 @@
+import React, { useState } from "react";
+import "./Contact.css";
+
+const Contact = () => {
+
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+
+    event.preventDefault();
+
+    setResult("Sending...");
+
+    const formData = new FormData(event.target);
+
+    formData.append(
+      "access_key",
+      "b8e0ac71-fede-41d5-9f1f-0452b45e5eab"
+    );
+
+    const response = await fetch(
+      "https://api.web3forms.com/submit",
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+    const data = await response.json();
+
+    if (data.success) {
+
+      setResult("Sent ! We will get back to you soon.");
+
+      event.target.reset();
+
+    }
+
+    else {
+
+      console.log("Error", data);
+
+      setResult("Something went wrong");
+
+    }
+
+  };
+
+  return (
+
+    <section className="contact-section" id="contact">
+
+      <div className="contact-container">
+
+        {/* LEFT SIDE — DETAILS + MAP */}
+
+        <div className="contact-left">
+
+          <h2>
+            Contact Us
+          </h2>
+
+          <p>
+            Reach out to us for bookings, enquiries, or travel assistance.
+            We are available 24/7.
+          </p>
+
+          <div className="contact-details">
+
+            <div className="contact-item">
+              <h4>Name</h4>
+              <p>Rohan Cars & Travels</p>
+            </div>
+
+            <div className="contact-item">
+              <h4>Email</h4>
+              <p>rohancars@example.com</p>
+            </div>
+
+            <div className="contact-item">
+              <h4>Phone</h4>
+              <p>+91 9359955164</p>
+            </div>
+
+            <div className="contact-item">
+              <h4>Location</h4>
+              <p>
+                Pooja Heights, Sharda Nagar,
+                Dhayari, Pune
+              </p>
+            </div>
+
+          </div>
+
+          <div className="map-container">
+
+            <iframe
+              title="Business Location"
+              src="https://www.google.com/maps?q=Pooja+Heights+Sharda+Nagar+Dhayari+Pune&output=embed"
+              loading="lazy"
+              allowFullScreen
+            ></iframe>
+
+          </div>
+
+        </div>
+
+        {/* RIGHT SIDE — FORM */}
+
+        <div className="contact-right">
+
+          <h2>
+            Send Enquiry
+          </h2>
+
+          <form onSubmit={onSubmit} className="contact-form">
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              required
+            />
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              pattern="[0-9]{10}"
+              maxLength="10"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+
+              <div className="send-and-message">
+              <button type="submit">
+                Send Enquiry
+              </button>
+                <span className="form-result">
+                  {result}
+                </span>
+              </div>
+          
+
+          </form>
+
+        
+
+        </div>
+
+      </div>
+
+    </section>
+
+  );
+
+};
+
+export default Contact;

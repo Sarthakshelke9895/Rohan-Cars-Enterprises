@@ -4,6 +4,11 @@ import Hero from './Hero/Hero';
 import Navbar from './Navbar/Navbar';
 import Services from './Services/Services';
 import { useState } from 'react';
+import Whychooseus from './Whychooseus/Whychooseus';
+import Reviews from './Reviews/Reviews';
+import Contact from './Contact/Contact';
+import Footer from './Footer/Footer';
+import FloatingButtons from './FloatingButtons/FloatingButtons';
 
 function App() {
      const [selectedService, setSelectedService] = useState(null);
@@ -17,6 +22,11 @@ function App() {
     <Hero/>
     <Services onSelectService={setSelectedService} />
     <Cars selectedService={selectedService}  onBook={handleBook}/>
+    <Whychooseus/>
+    <Reviews/>
+    <Contact/>
+    <Footer/>
+    <FloatingButtons/>
   
     </div>
     

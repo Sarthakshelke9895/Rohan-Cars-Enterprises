@@ -1,9 +1,35 @@
 .services
 {
-  padding: 60px 30px;
+  padding: 20px 30px 60px 30px;
   background: #f2f4f7;
   color:  #0B3C5D;
   text-align: left;
+  border-bottom: 1px solid #CBA135;
+ 
+  
+}
+
+.fade-in
+{
+opacity:0;
+transform:translateY(40px);
+animation:fadeUp 0.9s ease forwards;
+animation-timeline:view();
+animation-range:entry 0% cover 35%;
+}
+
+@keyframes fadeUp
+{
+from
+{
+opacity:0;
+transform:translateY(40px);
+}
+to
+{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .services-header h2
@@ -71,7 +97,7 @@
 
 .service-card p
 {
-  font-size: 15px;
+  font-size: 16px;
   color: gray;
   line-height: 1.5;
 }
@@ -86,6 +112,7 @@
   .services-grid
   {
     grid-template-columns: repeat(2, 1fr);
+
   }
 }
 
@@ -93,11 +120,47 @@
 {
   .services
   {
-    padding: 70px 20px;
+    padding: 10px 10px 20px 10px;
   }
 
   .services-grid
   {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+  }
+  .services-header h2
+  {
+    font-size: 24px;
+    margin: 0px;
+  }
+  .services-header p
+  {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .service-card
+  {
+    padding: 10px 10px;
+    width: 100%;
+    height: auto;
+  }
+ 
+  .service-card-images{
+    width: 60px;
+    height: 60px;
+  }
+  .service-card h3
+  {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .service-card p
+  {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: justify;
+    hyphens: auto;
   }
 }

@@ -14,7 +14,7 @@ const Services = ({ onSelectService }) => {
       id: "local",
       image: Service1,
       title: "Local City Rides",
-      description: "Fast and affordable rides for daily travel."
+      description: "Fast and affordable rides for daily travel,across the city with ease."
     },
     {
       id: "airport",
@@ -47,26 +47,37 @@ const Services = ({ onSelectService }) => {
       description: "Premium cars for special occasions."
     }
   ];
+const handleClick = (service) => {
 
-  const handleClick = (service) => {
+  onSelectService(service);
 
-    onSelectService(service);
+  setTimeout(() => {
 
-    const carsSection = document.getElementById("cars");
+    const carsSection = document.getElementById("car");
 
     if (carsSection) {
 
-      carsSection.scrollIntoView({
+      const yOffset = -200;
+
+      const y =
+        carsSection.getBoundingClientRect().top +
+        window.pageYOffset +
+        yOffset;
+
+      window.scrollTo({
+        top: y,
         behavior: "smooth"
       });
 
     }
 
-  };
+  }, 120);
+
+};
 
   return (
 
-    <section className="services">
+    <section className="services fade-in" id="services">
 
       <div className="services-header">
 

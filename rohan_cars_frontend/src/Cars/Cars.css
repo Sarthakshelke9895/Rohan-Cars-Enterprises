@@ -1,8 +1,10 @@
 .cars-section
 {
-  padding: 20px 30px;
+  padding: 20px 30px 60px 30px;
   background:  #f2f4f7;
   color: #0B3C5D;
+  border-bottom:  1px solid #CBA135;
+
 }
 
 .cars-header h2
@@ -12,6 +14,15 @@
   font-weight: 700;
   margin-bottom: 10px;
   text-align: left;
+}
+.icon-car{
+  height: 20px;
+  width: 20px;
+}
+.logo-and-type{
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
 }
 
 .cars-header p
@@ -27,78 +38,118 @@
 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 50px;
 }
+/* Card container */
+.car-card {
 
-.car-card
-{
-  background: #F9F9F9;
+  height: 250px;
   border-radius: 4px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
   cursor: pointer;
-  border: 1px solid #CBA135;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.car-card:hover
-{
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-}
 
-.car-image img
-{
+/* Image */
+.car-image img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover; /* image covers full card */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.car-details
-{
-  padding: 20px;
-  text-align: center;
+/* Gradient overlay */
+.gradient-overlay {
+
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+.info{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  
+}
+.name{
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  gap: -10px;
+}
+.card-info{
+  display: flex;
+  width: 100%;
+  padding: 5px 10px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.car-details h3
-{
-  font-family: Poppins, sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.car-details p
-{
-  font-family: Inter, sans-serif;
-  font-size: 14px;
-  color: #666666;
-  margin: 4px 0;
-}
-
-.car-price
-{
-  font-weight: 700;
-  color: #CBA135;
-  margin: 12px 0;
-}
-
-.book-btn
-{
-  background: #0B3C5D;
+/* Car details on top of image */
+.car-details {
+  position: absolute;
+  bottom: 1px;
   color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-family: Poppins, sans-serif;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.3s ease;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  
+  
+
 }
 
-.book-btn:hover
-{
-  background: #0A324B;
+
+.car-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
+
+.car-details p {
+  margin: 2px 0;
+}
+
+.car-price {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Specific Book button */
+.book-btn-car {
+  margin-top: 1px;
+  padding: 10px 14px;
+  background-color: #ff4c4c;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  display: inline-flex;      /* flex for text + arrow */
+  align-items: center;       /* vertically center */
+  gap: 8px;                  /* space between text and arrow */
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.book-btn-car:hover {
+  background-color: #e03e3e;
+  transform: translateY(-1px);
+}
+
+/* Arrow inside this button only */
+.book-btn-car .arrow3 {
+  width: 16px;   /* adjust size */
+  height: 16px;
+  display: inline-block;
+}
+
 
 @media (max-width: 992px)
 {
@@ -117,6 +168,50 @@
 
   .cars-section
   {
-    padding: 60px 20px;
+    padding: 10px 10px 20px 10px;
+  }
+  .cars-header h2
+  {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 0px;
+    line-height: 1.2;
+  }
+  .cars-header p
+  {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  .car-card{
+  height: 230px;
+  margin: 0px;
+  }
+  .info{
+    gap: 15px;
+    width: 100%;
+    
+    
+    }
+  .card-info{
+    padding: 5px;
+  }
+  .book-btn-car{
+    padding: 8px 8px;
+    margin-top: 5px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.9);
+  }
+  .name{
+    width: 100%;
+    padding: 0px 5px;
+  }
+  .car-details h3{
+
+
+    font-size: 18px;
+    margin-bottom: 8px;
   }
 }

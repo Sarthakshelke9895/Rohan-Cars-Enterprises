@@ -78,10 +78,16 @@ const Hero = () => {
     }
 
   }, [current, slides.length]);
+    const handleEnquiry = () => {
+  const message = `Hi, I want to enquire about your car services.`;
+  // Replace 919XXXXXXXXX with your full number (country code + number)
+  window.open(`https://wa.me/918767143132?text=${encodeURIComponent(message)}`);
+};
 
   return (
 
     <section
+    id="home"
       className="hero"
       onMouseEnter={stopAutoSlide}
       onMouseLeave={startAutoSlide}
@@ -108,7 +114,7 @@ const Hero = () => {
 
               <p>{slide.description}</p>
 
-              <button className="book-btn">
+              <button className="book-btn-hero"  onClick={handleEnquiry}>
                 Book Now
                 <img src={arrow} alt="Arrow" className='arrow2' />
               </button>
