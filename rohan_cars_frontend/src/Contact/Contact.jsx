@@ -74,12 +74,12 @@ const Contact = () => {
 
             <div className="contact-item">
               <h4>Email</h4>
-              <p>rohancars@example.com</p>
+              <p>rohancarenterprises@gmail.com</p>
             </div>
 
             <div className="contact-item">
               <h4>Phone</h4>
-              <p>+91 9359955164</p>
+              <p>+91 9960161934 <br />+91 8767143132</p>
             </div>
 
             <div className="contact-item">

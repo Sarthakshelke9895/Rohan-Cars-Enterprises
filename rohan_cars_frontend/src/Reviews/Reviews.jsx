@@ -7,9 +7,9 @@ import person2 from "../Assets/person2.jpg";
 import person3 from "../Assets/person3.jpg";
 
 const reviews = [
-  { id: 1, image: person1, name: "Kashish Chaugule", rating: 5, message: "Excellent service! The car was clean and the driver was very professional." },
-  { id: 2, image: person2, name: "Ram Jogdand", rating: 4, message: "Smooth ride and on-time pickup. Highly recommend!" },
-  { id: 3, image: person3, name: "Thala Dhoni", rating: 5, message: "Affordable pricing and friendly drivers. Will book again." },
+  { id: 1, image: person1, name: "Prajwal Chormale", rating: 5, message: "Excellent service! The car was clean and the driver was very professional." },
+  { id: 2, image: person2, name: "Shubham Yadav", rating: 4, message: "Smooth ride and on-time pickup. Highly recommend!" },
+  { id: 3, image: person3, name: "Sarthak Shelke", rating: 5, message: "Affordable pricing and friendly drivers. Will book again." },
 ];
 
 const ourWork = [

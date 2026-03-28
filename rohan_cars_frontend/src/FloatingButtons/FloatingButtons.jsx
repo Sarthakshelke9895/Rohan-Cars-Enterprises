@@ -5,7 +5,7 @@ import whatsappIcon from "../Assets/whatsapp.png";
 
 const FloatingButtons = () => {
 
-  const phoneNumber = "918767143132";
+  const phoneNumber = "919960161934";
 
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;

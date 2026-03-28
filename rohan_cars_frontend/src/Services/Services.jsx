@@ -107,7 +107,7 @@ const handleClick = (service) => {
               {service.title}
             </h3>
 
-            <p>
+            <p id="service-description">
               {service.description}
             </p>
 
