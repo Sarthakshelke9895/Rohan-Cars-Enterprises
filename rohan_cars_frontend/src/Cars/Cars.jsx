@@ -207,7 +207,7 @@ const Cars = ({ selectedService, onBook }) => {
                     <div className="info">
                       <div className="logo-and-type">
                         <img src={seat} alt="Seats" className="icon-car" />
-                        <span>{car.seats} Seats</span>
+                        <span>{car.seats}</span>
                       </div>
 
                       <div className="logo-and-type">
