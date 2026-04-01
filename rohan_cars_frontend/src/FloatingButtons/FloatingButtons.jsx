@@ -5,7 +5,8 @@ import whatsappIcon from "../Assets/whatsapp.png";
 
 const FloatingButtons = () => {
 
-  const phoneNumber = "919960161934";
+  const phoneNumber = "9960161934";
+  const phonewhatsapp = "918767143132"
 
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -17,7 +18,7 @@ const FloatingButtons = () => {
       "Hello, I would like to enquire about your cab services.";
 
     window.open(
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+      `https://wa.me/${phonewhatsapp}?text=${encodeURIComponent(message)}`,
       "_blank"
     );
 
