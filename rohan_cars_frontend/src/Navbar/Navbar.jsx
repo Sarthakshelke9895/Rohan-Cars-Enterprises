@@ -45,7 +45,7 @@ setMenuOpen(false)
   }}>
             <img src={logo} alt="Logo" className='web-logo' />
             <div className="company-name">
-              <h2>Rohan Cab Services</h2>
+              <h2>Rohan Cab Service</h2>
               <h4>Car | Rental | Sales</h4>
             </div>
 
