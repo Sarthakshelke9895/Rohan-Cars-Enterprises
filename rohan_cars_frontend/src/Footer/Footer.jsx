@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-about">
 
           <h2>
-            Rohan Cars & Services 
+            Rohan Cab Service
           </h2>
 
           <p>
