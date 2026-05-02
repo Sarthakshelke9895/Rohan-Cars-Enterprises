@@ -69,7 +69,7 @@ const Contact = () => {
 
             <div className="contact-item">
               <h4>Name</h4>
-              <p>Rohan Cars & Travels</p>
+              <p>Rohan Cab Service</p>
             </div>
 
             <div className="contact-item">
@@ -79,14 +79,13 @@ const Contact = () => {
 
             <div className="contact-item">
               <h4>Phone</h4>
-              <p>+91 9960161934 <br />+91 8767143132</p>
+              <p> +91 9960161934 </p>
             </div>
 
             <div className="contact-item">
               <h4>Location</h4>
               <p>
-                Pooja Heights, Sharda Nagar,
-                Dhayari, Pune
+              Dhayreshwar Mandir, Benkar Nagar, Dhayari, Pune, Maharashtra 411041
               </p>
             </div>
 

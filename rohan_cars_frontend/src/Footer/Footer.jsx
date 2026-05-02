@@ -140,7 +140,7 @@ const Footer = () => {
           </h3>
 
           <p>
-             Pooja Heights Sharda Nagar Dhayari Pune - 411041.
+            Dhayreshwar Mandir, Benkar Nagar, Dhayari, Pune, Maharashtra 411041
           </p>
 
           <p>
