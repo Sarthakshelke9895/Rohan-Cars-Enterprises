@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import './Navbar.css'
 import { Link } from 'react-scroll';
-import logo from '../Assets/weblogo1.png'
+import logo from '../Assets/logo.png'
 import arrow from '../Assets/arrow.png'
 import menu_icon from "../Assets/menu.png";
 import close_icon from "../Assets/close.png";
@@ -44,10 +44,7 @@ setMenuOpen(false)
     window.location.reload();
   }}>
             <img src={logo} alt="Logo" className='web-logo' />
-            <div className="company-name">
-              <h2>Rohan Cab Service</h2>
-              <h4>Car | Rental | Sales</h4>
-            </div>
+
 
       </div>
 
